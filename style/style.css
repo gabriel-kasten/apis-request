@@ -1,0 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.state-field {
+    /* height: 24px; */
+}
+
+.state-animation {
+    animation: slide-left 5s linear infinite;
+}
+
+@keyframes slide-left {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
