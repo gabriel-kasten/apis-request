@@ -42,7 +42,10 @@ $('#buttonRemoveValue').on("click", function () {
     var itemsChecked = $('#table').find('td [type="checkbox"]:checked')
     for (let i = 0; i < itemsChecked.length; i++) {
         itemsChecked[i].parentNode.parentNode.remove();
-        console.log(itemsChecked[i]); // pegar o valor do id, subtrair por 1 e remover a posição equivalente do array inputValue 
+        var itemIdValue = $(itemsChecked[i]).attr("id");
+        inputValue = inputValue.filter((itemIdValue) => {
+            return inputValue !== itemIdValue;
+        })
     }
 });
 
